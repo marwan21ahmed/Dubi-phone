@@ -1,0 +1,44 @@
+<div class="container py-5">
+  <h1 class="fw-semibold fs-2 my-5" [ngClass]="{'text-end':isArabic}">
+
+    @if (isArabic) {
+      تسوق بالفئة
+      }
+      @else {
+        Shop by category
+      }
+  </h1>
+
+  <!-- <app-card-slider >
+
+  @for (item of Categories; track item.id;let i=$index) {
+  <li class="list-unstyled item">
+    <a [routerLink]="['category/'+item.name.split(' ').join('').toLowerCase()]" routerLinkActive="router-link-active"  draggable="false">
+      <img draggable="false" src="/assets/Images/Categories/{{ item.imagePath }}" [alt]="item.name" class="w-75"/>
+      <span class="d-block">{{ item.name }}</span>
+    </a>
+  </li>
+  }
+</app-card-slider> -->
+
+  <p-carousel [value]="Categories" [numVisible]="7" [showIndicators]="false" [numScroll]="1" [circular]="true"
+    [autoplayInterval]="5000">
+    <ng-template let-cat pTemplate="item">
+      <li class="list-unstyled item text-center">
+        <a [routerLink]="['/category/'+cat.name.split(' ').join('').toLowerCase()]"
+          draggable="false">
+          <img draggable="false" src="/assets/Images/Categories/{{ cat.imagePath }}" [alt]="cat.name" class="w-75" />
+          <span class="d-block">
+            @if (isArabic) {
+            {{cat.arabicName}}
+            }
+            @else {
+            {{ cat.name }}
+            }
+          </span>
+        </a>
+      </li>
+
+    </ng-template>
+  </p-carousel>
+</div>

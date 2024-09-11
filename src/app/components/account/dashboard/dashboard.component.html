@@ -1,0 +1,49 @@
+<!--the header-->
+<div class="container">
+  <div class="theFirst">
+    <h2>Account Overview</h2>
+  </div>
+  <!--the second-->
+
+  <div class="theSecond mt-5">
+    <div>
+      <div class="d-flex justify-content-between align-items-center">
+        <h3>Personal Details</h3>
+        <a routerLink="/account/edit-account">Edit Account Details</a>
+      </div>
+      <div class="theContainer">
+        <div>
+          Name
+          <p>{{user?.name}}</p>
+        </div>
+        <div> Email Address
+          <p>{{user?.emailaddress}}</p>
+        </div>
+        <div> Phone Number
+          <p>{{user?.phonenumber}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--the third-->
+  <div class="theSecond mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h3>Default Address</h3>
+        <a routerLink="/account/edit-address">Manage My Addresses</a>
+    </div>
+
+
+    <div class="theContainer">
+      <div class="Bill">
+        <i class="fa-solid fa-location-pin me-2" style="color: rgb(43, 122, 185);"></i> Billing Address
+        <p class="my-3">Address Details</p>
+        <p>....</p>
+      </div>
+
+      <div class="editting">
+        <a routerLink="/account/edit-address">Edit Address</a> <i class="fa-solid fa-pen-to-square" style="color:rgb(43, 122, 185);"></i>
+      </div>
+    </div>
+  </div>
+</div>

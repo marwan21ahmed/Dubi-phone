@@ -1,0 +1,106 @@
+{
+  "nav": {
+  "mobiles": {
+    "apple": "Apple",
+    "oppo": "Oppo",
+    "vivo": "Vivo",
+    "realme": "Realme",
+    "xiaomi": "Xiaomi",
+    "honor": "Honor",
+    "huawei": "Huawei",
+    "infinix": "Infinix"
+  },
+  "tablets": {
+    "ipad": "Ipad",
+    "samsung": "Samsung Tablet",
+    "realme": "Realme Tablet",
+    "lenovo": "Lenovo Tablet",
+    "huawei": "Huawei Tablet",
+    "tcl": "TCL"
+  },
+  "laptops": {
+    "asus": "Asus Laptops",
+    "dell": "Dell Laptops",
+    "hp": "HP Laptops",
+    "lenovo": "Lenovo Laptops",
+    "apple": "Apple Laptops"
+  },
+  "printers": {
+    "hp": "HP Printers",
+    "epson": "Epson Printers"
+  },
+  "tvs": {
+    "samsung": "Samsung TV",
+    "lg": "LG TV",
+    "Rowa": "Rowa TV",
+    "castle": "Castle TV",
+    "ata": "ATA TV",
+    "ultra": "ULTRA TV"
+  },
+  "monitors": {
+    "lg": "LG Monitors"
+  },
+  "games": {
+    "playstation": "PlayStation Consoles",
+    "cds": "Games CDs",
+    "accessories": "Games Accessories",
+    "headset": "Gaming Headset",
+    "mouse": "Gaming Mouse & Keyboard",
+    "scooters": "NScooters"
+  },
+  "mobileAccessories": {
+    "watch": "Smart Watch",
+    "sound": "Sound & TWS",
+    "powerBank": "Power Bank",
+    "cables": "Cables & docks",
+    "covers": "Covers",
+    "screen": "Screen Protector",
+    "headset": "Mobile Sound & Headset"
+  },
+  "laptopsAccessories": {
+    "bag": "Bags",
+    "keyboard": "Keyboard & Mouse",
+    "flash": "Memories & Flashs",
+    "power": "Power & Batteries",
+    "Sound": "Sound & Headset"
+  },
+  "otherAccessories": {
+    "home": "Home Appliances",
+    "care": "Personal Care",
+    "Speakers": "Speakers",
+    "health": "Health equipment",
+    "car": "Car Solution",
+    "others": "Others"
+  },
+  "kitchen": {
+    "air": "Air Fryer",
+    "microwaves": "Microwaves",
+    "waffle": "Waffle & Sandwich Maker",
+    "blenders": "Blenders & Mixers",
+    "kettle": "Kettle & Coffee Make"
+  },
+  "small": {
+    "vacuum": "Vacuum",
+    "irons": "Irons",
+    "heater": "Heater"
+  },
+  "mainBrands": {
+    "apple": "Apple",
+    "samsung": "Samsung",
+    "lenovo": "Lenovo",
+    "huawei": "Huawei",
+    "lg": "LG",
+    "xiaomi": "Xiaomi",
+    "oppo": "Oppo"
+  },
+  "otherBrands": {
+    "dell": "Dell",
+    "hp": "HP",
+    "acer": "Acer",
+    "sony": "Sony",
+    "anker": "Anker",
+    "asus": "Asus",
+    "honor": "Honor"
+  }
+
+}}

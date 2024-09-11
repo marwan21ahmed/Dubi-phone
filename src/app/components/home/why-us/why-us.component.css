@@ -1,0 +1,22 @@
+h1{
+  margin-left:-130px;
+
+}
+.card{
+  border:none;
+  margin-left:-140px;
+}
+.card-body{
+  margin-top:90px;
+}
+.card-title{
+font-size: 30px;
+
+}
+.card-text{
+  font-size:23px;
+  width:110%;
+}
+.container{
+  width:100%;
+}

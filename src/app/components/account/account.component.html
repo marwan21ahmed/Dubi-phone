@@ -1,0 +1,63 @@
+<!--the header-->
+<main>
+  <div class="row">
+    <div class="col-4">
+      <ul class="col-11 py-4">
+        <li class="mb-4 "><span class="fw-medium fs-6">Hi, </span><span> {{user?.name}}</span></li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['dashboard']" routerLinkActive="active" >
+            <i class="fa-solid fa-user fa-xl"></i>
+            DashBoard</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link"  [routerLink]="['orders']" routerLinkActive="active">
+            <i class="fa-solid fa-cubes fa-xl"></i>
+            Orders</a>
+        </li>
+
+
+        <li class="nav-item ">
+          <a class="nav-link"[routerLink]="['my-wishlist']" routerLinkActive="active">
+            <i class="fa-solid fa-heart fa-xl"></i>
+            My Wishlist</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['coupons']" routerLinkActive="active">
+            <i class="fa-solid fa-ticket fa-xl text-danger"></i>
+            Coupons</a>
+        </li>
+
+
+
+        <li class="nav-item ">
+
+          <a class="nav-link" [routerLink]="['edit-address']" routerLinkActive="active">
+            <i class="fa-solid fa-map-location-dot fa-xl"></i>
+            Addresses</a>
+        </li>
+
+
+
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['edit-account']" routerLinkActive="active">
+            <i class="fa-solid fa-gear fa-xl"></i>
+            Account details</a>
+        </li>
+
+
+
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/login" (click)="logOut()">
+          <i class="fa-solid fa-right-from-bracket fa-xl text-danger" ></i>
+            Log out</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</main>

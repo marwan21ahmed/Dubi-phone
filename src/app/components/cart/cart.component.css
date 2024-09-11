@@ -1,0 +1,31 @@
+.payment{
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.container{
+    background-color: rgba(242, 244, 245, 0.853);
+}
+
+.itemimg{
+    background-color: white;
+}
+.form-select{
+    background-color: rgb(247,248,249);
+    width: 80px;
+  }
+  .arabic
+{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.arabictext{
+  direction: rtl;
+
+}
+
+.arabicposation{
+  position: left;
+}

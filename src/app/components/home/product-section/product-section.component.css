@@ -1,0 +1,15 @@
+.primary-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 200px;
+  background-image: linear-gradient(to right,#266da6, #3283c3);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.primary-btn:hover{
+  background-image: linear-gradient(to right, #25689d,#2e78b2);
+}

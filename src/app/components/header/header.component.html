@@ -1,0 +1,335 @@
+
+<nav class="navbar navbar-expand-lg navbar-light p1">
+  <div class="container-fluid" [ngClass]="{'arabic': isArabic}">
+    <a class="navbar-brand fs-6 d-flex"  [ngClass]="{'arabic': isArabic}">
+      <i class="fa-solid fa-truck-fast mx-2"></i>
+      {{'header.shipping' | translate}}
+      <span class="fs-6 text fw-bold">&nbsp;500&nbsp;
+      </span>
+      <span class="fs-6 text fw-bold">&nbsp;{{'currency' | translate}}</span>
+    </a>
+
+    <div class="fw-medium navbar-nav align-items-center" [ngClass]="{'arabic': isArabic}">
+      <a class="nav-link align-items-center d-flex gap-2" [ngClass]="{'arabic': isArabic}" href="tel:15254">
+        <i class="fa fa-solid fa-phone"></i>
+        15254
+      </a>
+      <a class="nav-link align-items-center d-flex gap-2" [ngClass]="{'arabic': isArabic}" href="whatsapp://send?phone=+20 110 043 2184">
+        <i class="fa fa-brands fa-whatsapp" id="whatsapp"></i>
+        {{'header.whatsapp' | translate}}
+      </a>
+      <a class="nav-link align-items-center d-flex gap-2"[ngClass]="{'arabic': isArabic}">
+        <i class="material-icons fs-5">storefront</i>
+        {{'header.stores' | translate}}
+      </a>
+
+      <a class="nav-link align-items-center d-flex gap-2 lang-btn py-0" style="cursor: pointer;" (click)="useLanguage()">
+        {{'language' | translate}}
+      </a>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg p2">
+  <div class="container-fluid" [ngClass]="{'arabic': isArabic}">
+    <a class="navbar-brand fs-3"routerLink="">
+      <img src="/assets/dubai-logo-svg.svg" />
+    </a>
+    <div class="search-bar s">
+      <i class="fa fa-search" id="search"></i>
+      <input #searchRef type="text" placeholder="{{'header.placeholder' | translate}}" [ngClass]="{'arabic': isArabic}" (keyup.enter)="search(searchRef.value)" />
+    </div>
+    <div class="btns d-flex gap-4" [ngClass]="{'arabic': isArabic}">
+      @if(!isLoggedIn){
+
+        <button type="button" class="btn btn-primary custom-button" routerLink="/login">
+          <i class="fa-solid fa-user button-icon"></i>
+          {{'header.login' | translate}}
+        </button>
+      }
+      @else{
+        <button type="button" class="btn btn-primary custom-button" routerLink="/account">
+          <i class="fa-solid fa-user button-icon"></i>
+          {{'header.account' | translate}}
+        </button>
+        <button type="button" class="btn btn-primary custom-button" routerLink="/wishlist">
+          <i class="fa-solid fa-heart me-2 text-black"></i>
+          {{'header.wishlist' | translate}}
+        </button>
+      }
+      <button type="button" class="btn btn-primary custom-button" routerLink="/cart">
+        <i class="fa-solid fa-cart-shopping button-icon"></i>
+        {{'header.shoppingCart' | translate}}<span class="fs-6 text fw-medium px-2"> ({{ cartCount }})</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light p3 position-relative ">
+  <div class="container-fluid justify-content-start gap-5 py-2" [ngClass]="{'flex-row-reverse': isArabic}">
+    <a class="text-danger fw-medium nav-link">
+      <img src="/assets/last-piece.svg" />
+
+      {{'header.lastPiece' | translate}}
+    </a>
+    <!--=============== Dropdown ============================ -->
+    <div class="Filter d-flex text-end" [ngClass]="{'flex-row-reverse': isArabic,'arabic':isArabic}">
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent toggle-btn" (click)="toggleDropdown($event)">{{'nav.mainTitles.title1' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title1' | translate}}</h4>
+          <ul class="list-unstyled">
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/mobile/samsung']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >
+                {{'nav.mobiles.samsung'| translate}}
+                </a
+              >
+            </li>
+            @for (item of navData?.mobiles | keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/mobile/'+item.key]"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >
+                {{'nav.mobiles.'+item.key | translate}}
+                </a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title2' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.tablets | keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/tablets/']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >
+                {{'nav.tablets.'+item.key | translate}}
+                </a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent toggle-btn " (click)="toggleDropdown($event)">{{'nav.mainTitles.title2' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title3' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.laptops |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/laptops/'+item.key]"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.laptops.'+item.key | translate}}
+                </a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title4' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.printers |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/printers']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.printers.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent  toggle-btn" (click)="toggleDropdown($event)">{{'nav.mainTitles.title3' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title5' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.tvs |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/tvs']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.tvs.'+item?.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title6' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.monitors |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/tvs']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.monitors.'+item?.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent toggle-btn " (click)="toggleDropdown($event)">{{'nav.mainTitles.title4' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title7' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.games |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/games']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.games.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent toggle-btn " (click)="toggleDropdown($event)">{{'nav.mainTitles.title5' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title8' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.mobileAccessories |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/accessories']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.mobileAccessories.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title9' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.laptopsAccessories |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/accessories']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.laptopsAccessories.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title10' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.otherAccessories |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/accessories']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.otherAccessories.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent toggle-btn " (click)="toggleDropdown($event)">{{'nav.mainTitles.title6' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title11' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.kitchen |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/kitchenappliances']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.kitchen.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title12' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.small |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/category/smallappliances']"
+                routerLinkActive="router-link-active" (click)="closeMenu()"
+                >{{'nav.small.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <button [dir]="isArabic ? 'rtl':'ltr'" class="border-0 bg-transparent toggle-btn " (click)="toggleDropdown($event)">{{'nav.mainTitles.title7' | translate}}<i class="fa-solid fa-angle-down arrow arrow-up mx-2 "></i></button>
+      <div class="menu d-flex gap-5">
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title13' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.mainBrands |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/brand/' + item.key]"
+                routerLinkActive="router-link-active"
+                (click)="closeMenu()"
+                >{{'nav.mainBrands.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="fw-semibold">{{'nav.subTitles.title14' | translate}}</h4>
+          <ul class="list-unstyled">
+            @for (item of navData?.otherBrands |keyvalue; track $index) {
+            <li class="p-2">
+              <a
+                class="nav-link"
+                [routerLink]="['/brand/' + item.key]"
+                routerLinkActive="router-link-active"
+                (click)="closeMenu()"
+                >{{'nav.otherBrands.'+item.key | translate}}</a
+              >
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</nav>
+<div class="overlay" [hidden]="!isDropdownOpen" (click)="closeMenu()"></div>

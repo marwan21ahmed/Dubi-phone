@@ -1,0 +1,163 @@
+.navbar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  padding: 10px 60px;
+  margin: 0;
+  background-color: #e6f1f9;
+}
+i{
+  font-size: 20px;
+  color: #2b7ab9;
+}
+#search{
+  color:#d1d1d1;
+  font-size: 15px;
+  margin-right: 10px;
+}
+#whatsapp{
+  color : #25d366;
+}
+.search-bar {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  width: 800px;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+::placeholder {
+  font-size:15px;
+}
+
+.search-bar:hover, .search-bar:focus-within {
+  background-color: #e2eff8;
+  border:1px solid #2f7dbc ;
+}
+.search-bar input:hover, .search-bar input:focus-within {
+  background-color: #e2eff8;
+}
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF; /* White background */
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  transition: border-color 0.3s ease;
+  padding: 11px 20px;
+}
+
+.button-icon {
+  color: black;
+  /* font-size: 25px; */
+  margin-right: 8px;
+}
+
+.custom-button:active {
+  background-color: #FFFFFF;
+  border: 2px solid #a09c9c;
+  color: #000000;
+
+}
+.p1{
+  height: 40px;
+}
+.p2{
+  background-color: #ecf0f1;
+
+}
+.p3{
+  background-color: #edf0f2;
+}
+
+.lang-btn{
+  border-left: 1px solid rgb(71 85 105 );
+}
+.arabic .lang-btn{
+  border: none;
+  border-right: 1px solid rgb(71 85 105 );
+
+}
+/* Overlay */
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+}
+
+
+/* ================================Dropdown=========================================== */
+
+
+.arabic
+{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.grid , .g{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns, each taking up equal space */
+  grid-gap: 20px; /* Gap between grid items */
+  width: 100vw;
+
+}
+
+.menu-column {
+  text-align: center;
+}
+
+.menu-heading {
+  font-weight: bold;
+}
+
+.dropdown-items {
+  /* Add your styles for the dropdown items */
+}
+
+.menu{
+  display: none !important;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  padding:30px  72px;
+  left: 0;
+  z-index: 1;
+  height: auto;
+  margin-top: 30px;
+}
+.menu a{
+  transition: all .3s ease;
+}
+.menu a:hover {
+  text-decoration: underline;
+  color: rgb(43 122 185);
+}
+.arabic .menu {
+  flex-direction: row-reverse;
+}
+.arrow{
+  font-size: 15px;
+  transition: all .3s ease;
+}
+.menu-toggle + div {
+  display: flex !important;
+}
+.menu-toggle .arrow-up{
+  transform: rotate(180deg);
+}

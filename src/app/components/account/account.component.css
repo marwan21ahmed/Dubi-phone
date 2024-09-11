@@ -1,0 +1,25 @@
+main{
+  padding:10px 60px ;
+}
+ul{
+  list-style: none;
+  padding:1rem 0 ;
+  box-shadow: 0px 16px 128px -52px #307ebc59;
+  background-color: #fff;
+  border-radius: 24px;
+}
+ul li{
+  padding-inline:40px;
+}
+ul li a{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-block: 20px;
+}
+li:has(.active){
+  background: linear-gradient(85.4deg, #deecf7 0.52%, #eef6fb 100%), linear-gradient(0deg, #2b7ab9, #2b7ab9);
+}
+.active i  {
+  color: #2b7ab9;
+}

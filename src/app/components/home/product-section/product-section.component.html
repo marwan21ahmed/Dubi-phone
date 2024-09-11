@@ -1,0 +1,28 @@
+<div class="mx-auto mx-5 position-relative mt-5 py-5">
+  <div class="container mb-5 pb-5" [ngClass]="{'text-end': isArabic}">
+
+    <h3 class="fw-semibold fs-2">{{title}}</h3>
+    <a href="#">
+      <img class="w-100" [src]="imagePath" alt="hurry-up">
+    </a>
+  </div>
+  <!-- <app-card-slider [isAutoPlay]="false" class="pt-5" [CardWidth]="300">
+    @for (prod of products; track prod.id;let i=$index) {
+      <li class="list-unstyled item">
+        <app-card [product]="prod"></app-card>
+      </li>
+      }
+  </app-card-slider> -->
+  <p-carousel [value]="products" [numVisible]="5" [showIndicators]="false" [numScroll]="1" [circular]="true"  [autoplayInterval]="5000">
+    <ng-template let-prod pTemplate="item">
+      <li class="list-unstyled item me-3">
+        <app-card [product]="prod"></app-card>
+      </li>
+
+    </ng-template>
+</p-carousel>
+
+  <div class="btn px-3 my-4 mx-auto text-center d-flex justify-content-center" >
+    <a class="primary-btn" href="#"><span> {{'home.btn' |translate}}</span>&nbsp; <span>{{title}}</span></a>
+  </div>
+</div>

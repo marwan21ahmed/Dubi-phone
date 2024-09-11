@@ -1,0 +1,135 @@
+.arabic{
+  text-align: right;
+}
+.prdCard {
+  /* width: 300px; */
+  height: 420px;
+  padding: 4px;
+  border-radius: 24px;
+  border: 2px solid var(--white);
+  box-shadow: 0px 4px 32px -8px #00000014;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* margin-right: 1rem; */
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.card-label {
+  background-color: #e02954;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 48px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #fff;
+  z-index: 5;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+}
+.card-wish{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: 1px solid #d3dbde;
+  padding: 10px;
+  color: #e02954;
+  cursor: pointer;
+}
+.arabic .card-label{
+  left: 70%;
+}
+.card-img {
+  width: 100%;
+  margin: 0;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden;
+}
+.card-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* transition: all 0.3s ease-in-out; */
+  cursor: pointer;
+}
+.card-content {
+  height: 100%;
+  padding: 12px 16px 16px 16px;
+  border-radius: 24px;
+  background: #f3f5f6;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.price .highlight {
+  color: #e02954;
+  text-decoration: none;
+  font-weight: 700px;
+}
+.price .amount {
+  font-size: 22px;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+}
+del {
+  color: #4d4d4d;
+}
+.strike .amount {
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 1.25;
+}
+.card-btn a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px 20px;
+  height: 50px;
+  background-color: transparent;
+  color: #2b7ab9;
+  border-radius: 200px;
+  border: 1px solid #2b7ab9;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+}
+
+.grid-one.prdCard{
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  background-color: #F0F3F4;
+}
+.grid-one.prdCard .card-img{
+  height: auto;
+  justify-content: start;
+  width: fit-content;
+}
+.grid-one.prdCard .card-img img{
+  width: 180px;
+
+}
+.grid-one .card-label{
+  top: 5%;
+  left: 1%;
+}

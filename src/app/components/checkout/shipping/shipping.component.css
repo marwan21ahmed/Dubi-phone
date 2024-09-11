@@ -1,0 +1,56 @@
+.shipping-method > div {
+  cursor: pointer;
+}
+.checkout-step {
+  width: 32.5px;
+  height: 32.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 12px;
+  background: linear-gradient(82.24deg, #266da6 0%, #3283c3 100%);
+}
+.shipping-method > div:hover{
+  background-color: rgb(243 244 246) !important;
+  border: 1px solid rgb(209 213 219 );
+}
+.shipping-method > div:has(input:checked){
+  border: 1.5px solid #3283c3;
+  background: linear-gradient(85.4deg, #deecf7 0.52%, #eef6fb 100%),
+    linear-gradient(82.24deg, #266da6 0%, #3283c3 100%);
+}
+.shipping-method > div:has(input:checked) i {
+  color: #2b7ab9;
+}
+.shipping-method input {
+  width: 19px;
+  cursor: pointer;
+}
+.shipping-method input:checked {
+  accent-color: #266da6;
+}
+
+.shipping-method label {
+  cursor: pointer;
+}
+button[type="submit"] {
+  background-image: linear-gradient(to right, #266da6, #3283c8);
+  color: #fff;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.payment-step {
+  font-size: 16px;
+  width: 32.5px;
+  height: 32.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b7ab9;
+  border-radius: 12px;
+  background: #e6f1f9;
+  border: 1px solid #2b7ab9;
+}

@@ -1,0 +1,138 @@
+.container1 {
+  /* width:120%;
+   height:1120px; */
+  background-color: rgb(47, 126, 189);
+  color: White;
+  overflow: hidden;
+  /* margin-left:-120px; */
+}
+
+.image1 {
+  margin: 100px 80px;
+  height: 90px;
+  width: 280px;
+}
+
+svg {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.rightSide {
+  margin-top: 120px;
+  margin-left: -80px;
+}
+
+.rightSide .card {
+  margin: 20px;
+  border: none;
+  border-radius: 5%;
+  background-color: none;
+}
+
+.firstDiv a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  line-height: 24px;
+  font-family: manrope;
+  letter-spacing: 0.25px;
+  font-weight: 700;
+}
+
+.firstDiv p {
+  color: white;
+  font-size: 22px;
+  text-decoration: none solid rgb(230, 241, 249);
+  line-height: 24px;
+  font-family: manrope;
+  letter-spacing: 0.25px;
+  opacity: 0.7;
+  font-weight: 900;
+}
+
+.second {
+  margin-top: -650px;
+  width: 100%;
+  margin-left: 50px;
+}
+
+.second h1 {
+  font-size: 50px;
+  font-weight: 600;
+  width: 420px;
+  letter-spacing: -0.1px;
+  line-height: 55px;
+}
+
+.third {
+  margin-top: -520px;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.right div p {
+  margin-bottom: -8px;
+  margin-left: 40px;
+  font-size: 15px;
+  letter-spacing: 1.25px;
+}
+
+.right div h2 {
+  display: inline;
+  font-size: 25px;
+  margin-left: 10px;
+  letter-spacing: 2px;
+}
+
+.right div {
+  height: 70px;
+  width: 240px;
+  border: 2px solid white;
+  border-radius: 15%;
+  padding: 10px 20px;
+  vertical-align: middle;
+  margin-right: 36px;
+}
+
+.divBorder {
+  margin-left: 30px;
+}
+
+.line {
+  background-color: white;
+  width: 90%;
+  height: 0.5px;
+  margin-top: -400px;
+  margin-left: 10px;
+  line-height: 80%;
+}
+
+.third .left {
+  margin-top: 25px;
+}
+
+.last {
+  color: white;
+  margin-top: -350px;
+  font-size: 20px;
+}
+
+.between {
+  margin-top: 25px;
+}
+
+.arabic
+{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.arabictext{
+  direction: rtl;
+
+}
+
+.arabicposation{
+  position: left;
+}

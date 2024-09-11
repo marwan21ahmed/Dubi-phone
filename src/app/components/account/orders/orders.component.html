@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>My Orders</h1>
+  <p class="mb-4">You have {{orders.length}} orders in your list.</p>
+  @if (orders.length == 0) {
+  <div class="blueDiv">
+    <div>No order has been made yet.</div>
+    <div class="right">Browser Product</div>
+  </div>
+  }
+  @else {
+  @for (order of orders; track $index) {
+  <div class="order row">
+    <div class="order-items col-9">
+    @for (item of order.orderItems; track $index) {
+      <div class="d-flex  gap-4 mb-4 order-item">
+        <div class="image">
+          <a [routerLink]="['/product/'+ item.name.split(' ').join('-')]" [state]="{id:item.productID}"  >
+          <img [src]="'assets/Images/Products/'+item.cover " alt=""></a>
+        </div>
+        <div class="item-details pt-3">
+          <p class="fw-medium fs-5">{{item.name}} </p>
+          <p class="text-black-50"><span class="text-black">QTY:</span> {{item.quantity}}</p>
+          <p class="fw-semibold"><span class="fw-bold">{{item.price | number :'3.0-0'}}</span> &nbsp;<span>EGP</span></p>
+        </div>
+      </div>
+    }
+  </div>
+    <div class="order_details col-3 py-5">
+      <h2 class="mb-4">Order Summary</h2>
+      <div class="m-3">
+        <p>Order</p>
+        <span>#{{order.id}} </span>
+      </div>
+      <div class="m-3">
+        <p>Order Date</p>
+        <span> {{order.orderedAt |date:'fullDate' }} </span>
+      </div>
+      <div class="m-3">
+        <p>Order Status</p>
+        <span>{{order.status}} </span>
+      </div>
+      <div class="m-3">
+        <p>Order Total</p>
+        <span class="main-color fw-bold fs-6">
+          <span><bdi>{{order.totalPrice | number :'3.0-0'}}  <span> EGP</span></bdi></span> </span>
+      </div>
+    </div>
+  </div>
+  }
+  }
+</div>

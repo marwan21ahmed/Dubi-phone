@@ -1,0 +1,38 @@
+<div class="d-flex gap-3 mt-4 align-items-center  mt-5 mb-4">
+  <div class="checkout-step fs-6">1</div>
+  <h3 class="main-color fw-medium fs-5 m-0">{{'checkout.shipping' | translate}}</h3>
+</div>
+
+<div class="shipping-summary">
+  <div class=" py-3">
+    <div class="d-flex justify-content-between mb-2">
+      <p class="fs-6 m-0">{{'checkout.contact' | translate}}</p>
+      <a class="main-color fs-6" [routerLink]="['/checkout']" routerLinkActive="router-link-active">{{'checkout.change' | translate}}</a>
+    </div>
+    <h3 class="m-0 fw-medium">{{order.phone}}</h3>
+  </div>
+  <div class=" py-3">
+    <p class="fs-6 mb-2">{{'checkout.shippingMethod' | translate}}</p>
+    <h3 class="m-0 fw-medium">{{order.shippingMethod}}</h3>
+  </div>
+  <div class=" py-3">
+    <div class="d-flex justify-content-between mb-2">
+      <p class="fs-6 m-0">{{'checkout.customerAddress' | translate}}</p>
+      <a class="main-color fs-6" [routerLink]="['/checkout']" routerLinkActive="router-link-active" >{{'checkout.change' | translate}}</a>
+    </div>
+    <h3 class="m-0 fw-medium">{{order.address}}</h3>
+  </div>
+</div>
+
+<div class="d-flex gap-3 mt-4 align-items-center  mt-5 mb-4">
+  <div class="checkout-step fs-6">2</div>
+  <h3 class="main-color fw-medium fs-5 m-0">{{'checkout.payment' | translate}}</h3>
+</div>
+
+<div class="payment-method">
+  <h2>{{'checkout.placeOrder' | translate}}</h2>
+  <div #paymentRef >
+
+</div>
+
+<button type="submit" class="fs-6 fw-medium">{{'checkout.placeOrder' | translate}}</button>

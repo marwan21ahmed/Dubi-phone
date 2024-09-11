@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <h1 class="fw-semibold fs-2 my-5" [ngClass]="{'text-end':isArabic}" [hidden]="!showTitle">
+    @if (isArabic) {
+      تسوق بالماركة
+    }
+    @else {
+    Shop by brands
+    }
+  </h1>
+  <!-- <app-card-slider  class="brand" [isSmall]="isSmall" [CardWidth]="160" >
+    @for (item of brands; track item.id;let i=$index) {
+      <li class="list-unstyled item" >
+        <a [routerLink]="['/brand',item.name.toLowerCase()]" routerLinkActive="router-link-active" draggable="false" [ngClass]="{'small': isSmall}">
+          <img draggable="false" src="/assets/Images/brands/{{ item.imagePath }}" [alt]="item.name" class="w-100"/>
+        </a>
+      </li>
+    }
+  </app-card-slider> -->
+
+  <p-carousel  [value]="brands" [numVisible]="numOfBrands" [showIndicators]="false" [numScroll]="1" [circular]="true"
+    [autoplayInterval]="5000">
+    <ng-template let-brand pTemplate="item">
+      <li class="list-unstyled item">
+        <a [routerLink]="['/brand',brand.name.toLowerCase()]" routerLinkActive="router-link-active" draggable="false"
+          [ngClass]="{'small': isSmall}">
+          <img draggable="false" src="/assets/Images/brands/{{ brand.imagePath }}" [alt]="brand.name" class="w-100" />
+        </a>
+      </li>
+
+    </ng-template>
+  </p-carousel>
+
+</div>

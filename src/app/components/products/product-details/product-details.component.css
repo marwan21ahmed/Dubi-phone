@@ -1,0 +1,87 @@
+.img-preview{
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.grid-nogutter{
+  background-color: #fff;
+  border-radius: 20px ;
+  overflow: hidden;
+  margin-left:10px ;
+  /* height: 150px; */
+}
+.grid-nogutter img{
+  display: block;
+  width: 100%;
+  max-height: 150px;
+}
+.prd-name{
+  font-weight: 500 ;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.sale-price-title{
+  color: #e02954;
+    font-size: 22px;
+    letter-spacing: 0.25px;
+    --tw-text-opacity: 1;
+    font-weight: 700;
+}
+.stock{
+  font-size: 16px;
+}
+.out-of-stock{
+  color: #e02954;
+}
+.in-stock{
+  color: #13a03a;
+}
+.btn-color{
+  color:#2B7AB9
+}
+.add-to-cart-btn{
+  padding: 12px 30px;
+  color: #fff;
+  background-color: #2870AA;
+}
+
+.buy-btn{
+  padding: 12px 30px;
+  font-size: 16px;
+  color: #2b7ab9;
+  border: 1px solid #2b7ab9 !important;
+}
+.installments{
+  background: linear-gradient(85.4deg, #deecf7 0.52%, #eef6fb 100%);
+}
+
+.form-select{
+  background-color: rgb(247,248,249);
+  width: 80px;
+}
+.sale{
+  padding: 5px;
+  width: 70px;
+}
+.badge{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: red;
+  
+}
+
+.arabic
+{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.arabictext{
+  direction: rtl;
+ 
+}
+
+.arabicposation{
+  position: left;
+}

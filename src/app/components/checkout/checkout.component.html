@@ -1,0 +1,76 @@
+<div [dir]=" isArabic? 'rtl':'ltr'">
+<header class="bg-white py-3 mb-3">
+  <div class="container d-flex justify-content-between ">
+    <div class="d-flex gap-2 align-items-center">
+      <i class="bi bi-shield-fill-check main-color fa-xl"></i>
+      <p class="m-0">{{'checkout.secure' | translate}}</p>
+    </div>
+    <img src="/assets/dubai-logo-svg.svg" alt="">
+    <div class="d-flex gap-4 align-items-center">
+      <a class="nav-link" href="https:wa.me/201018766426" target="_blank"><img src="/assets/Images/whatsapp.svg" alt="whatsApp"> &nbsp; {{'checkout.whatsapp' | translate }}</a>
+      <a class="nav-link" href="tel:01018766426"><img src="/assets/Images/telphone.svg" alt="whatsApp"> &nbsp;15254</a>
+      <a  class="nav-link" style="cursor: pointer;" (click)="useLanguage()"><bdi class="fs-6">{{'language' | translate}} </bdi> </a>
+    </div>
+  </div>
+</header>
+<div class="container" >
+  <h1>{{'checkout.checkout' | translate}}</h1>
+  <div class="links">
+    <a [routerLink]="['/cart']"   class="nav-link fw-medium"
+      ><i class="fa-solid fa-angle-left"></i> &nbsp; {{'checkout.back' | translate}}
+    </a>
+    <a class="main-color mt-4 d-block"
+      ><i class="fa-solid fa-ticket me-2"></i>{{'checkout.coupon' | translate}}</a
+    >
+    <div class="row justify-content-between">
+
+      <div class="col-lg-8 col-12 mb-5">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="col-lg-4 mb-5 col-12 d-flex flex-column align-items-lg-end right-sec align-items-center gap-4">
+        <div class="bg-white px-4 py-3 col-11 ">
+          <h2 class="mb-4">{{'checkout.paymentSummary' | translate}}</h2>
+          <div class="sub-total d-flex justify-content-between mb-3">
+            <h4 class="m-0">{{'checkout.subtotal' | translate}}</h4>
+            <bdi ><span class="fs-5 fw-bold">{{totalPrice | number :'3.0-0'}}</span>&nbsp;<span>{{'currency' | translate}}</span></bdi>
+          </div>
+          <div class="shipping">
+            <h3 class="mb-2">{{'checkout.shipping' | translate}}</h3>
+            <div class="d-flex align-items-center">
+              <input   type="radio"  name="shipping" id="free" checked [checked]="home" (change)="home=true">
+              <label [ngClass]="{'fw-bold': home }" class="fs-6 ms-2" for="free">{{'checkout.freeShipping' | translate}}</label>
+            </div>
+            <div class="d-flex align-items-center">
+              <input type="radio" name="shipping" id="pickup" [checked]="!home" (change)="home=false">
+              <label [ngClass]="{'fw-bold':!home }" class="fs-6 ms-2" for="pickup">{{'checkout.pickupStore' | translate}}</label>
+            </div>
+          </div>
+          <div class="total d-flex justify-content-between mb-2">
+            <h4 class="m-0">{{'checkout.total' | translate}}</h4>
+            <bdi ><span class="fs-5 fw-bold">{{totalPrice | number :'3.0-0'}}</span>&nbsp;<span>{{'currency' | translate}}</span></bdi>
+          </div>
+        </div>
+        <div class="bg-white px-4 py-3 col-11 ">
+          <h2 class="mb-1">{{'checkout.products' | translate}}</h2>
+          <p class="fs-6">{{cart.length}} {{'checkout.productsCount' | translate}}</p>
+        <div class="products">
+          @for (item of cart; track $index) {
+          <div class="cart-item d-flex gap-2 py-3 px-2">
+            <img [src]="'/assets/Images/Products/'+item.cover" alt="product Image" style="width: 80px;">
+            <div class="flex-grow-1">
+              <a class="nav-link">{{ isArabic?item.arabicName: item.name}}</a>
+              <div class="d-flex justify-content-between mb-3 mt-2">
+                <bdi ><span class="fs-5 fw-bold">{{item.salePrice | number :'3.0-0'}}</span>&nbsp;<span>{{'currency' | translate}}</span></bdi>
+                <p class="m-0">{{'checkout.qty' | translate}} {{item.quantity}}</p>
+              </div>
+            </div>
+          </div>
+        }
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer> <div class="container py-4">2024 &copy; {{'checkout.footer' | translate}}</div></footer>
+</div>

@@ -1,0 +1,70 @@
+<section class="container p-3">
+  <div class="d-flex m-3 flex-column flex-sm-row">
+    <div class="row col-12 col-sm-5 col-md-4">
+      <form [formGroup]="loginform" class="form">
+        <div class="mb-5">
+          <h2 class="fs-3 mb-2">Log in</h2>
+          <p class="fs-6 sec-color">Log into your account and enjoy a faster checkout.</p>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label sec-color"
+            >Username or email address *</label
+          >
+          <input
+            type="email"
+            formControlName="Email"
+            class="form-control rounded-pill"
+            name="Email"
+            [ngClass]="{
+              'is-invalid': (!email?.touched || !email?.dirty) && email?.invalid
+            }"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label sec-color"
+            >Password*</label
+          >
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control rounded-pill"
+            name="password"
+            id="exampleInputPassword1"
+            placeholder="password"
+            [ngClass]="{
+              'is-invalid':
+                (!password?.touched || !password?.dirty) && password?.invalid
+            }"
+          />
+        </div>
+        <div class="mb-3 d-flex flex-row-reverse">
+          <a class="main-color fs-6" href="">Lost your password?</a>
+        </div>
+        <div class="mb-3">
+          <button
+            type="submit"
+            class="btn rounded-pill text-centre"
+            (click)="save(loginform)"
+          >
+            <i class="bi bi-box-arrow-in-right mx-2"></i>Log in
+          </button>
+        </div>
+        <div class="mb-4">
+          <p>Don’t have an account? <a class="main-color  fw-semibold" routerLink="/sign up">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="row col-12 col-sm-7 mx-5">
+      <div class="img">
+        <img
+          decoding="async"
+          class="image"
+          src="https://www.dubaiphone.net/wp-content/themes/dubaiphone-child/assets/images/Login_Photo.png"
+        />
+      </div>
+    </div>
+  </div>
+</section>

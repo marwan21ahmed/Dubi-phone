@@ -1,0 +1,38 @@
+<section class="container bg-light p-3">
+    <div class="d-flex m-3 flex-column flex-sm-row  ">
+        <div class="row col-12 col-sm-5 col-md-4  ">
+            <form [formGroup]="signform" class="form">
+                <div class="mb-3">
+                    <h3>Sign Up</h3>
+                    <p>Create an account and enjoy Fast Easy Checkout, Order Tracking, and Loyalty Points.</p>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">UserName *</label>
+                    <input type="text" formControlName="UserName" class="form-control rounded-pill" name="UserName"
+                    [ngClass]="{'is-invalid':(!UserName?.touched||!UserName?.dirty) && UserName?.invalid}"
+                     aria-describedby="emailHelp" placeholder="UserName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address *</label>
+                    <input type="email" formControlName="Email" class="form-control rounded-pill" name="email"
+                    [ngClass]="{'is-invalid':(!Email?.touched || !Email?.dirty) && Email?.invalid}"
+                     aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password*</label>
+                    <input type="Password" formControlName="Password" class="form-control rounded-pill" name="Password"
+                      id="exampleInputPassword1" placeholder="Password"
+                      [ngClass]="{'is-invalid':(!Password?.touched || !Password?.dirty) && Password?.invalid}">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary rounded-pill text-centre" (click)="signup()">Create Account</button>
+                </div>
+            </form>
+        </div>
+        <div class="row col-12 col-sm-7 mx-5 ">
+            <div class="img ">
+                <img decoding="async" class="image"  src="https://www.dubaiphone.net/wp-content/themes/dubaiphone-child/assets/images/Login_Photo.png">
+            </div>
+        </div>
+    </div>
+</section>

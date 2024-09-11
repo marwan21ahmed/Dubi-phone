@@ -1,0 +1,50 @@
+<div class="prdCard" [ngClass]="{'grid-one': isGridOne,'arabic': isArabic}" #cardRef [dir]="isArabic?'rtl':'ltr'">
+  @if (isWishlist) {
+  <div class="card-wish" (click)="removeFromWishlist()">
+    <i class="fa-solid fa-heart"></i>
+  </div>
+}@else{
+  <div class="card-label">
+    <p class="m-0">{{'card.sale' | translate}}</p>
+  </div>
+}
+  <div class="card-img">
+    <img
+      [src]="'assets/Images/Products/'+product.cover"
+      [alt]="product.name"
+    />
+  </div>
+  <div class="card-content">
+    <p class="text-black fw-semibold">
+      @if (isArabic) {
+        {{product.arabicName}}
+      }
+      @else{
+        {{product.name}}
+      }
+    </p>
+    <div class="d-flex flex-column g-1" >
+      <div class="price d-flex " >
+        <ins class="highlight" >
+          <span class="amount">
+            <bdi>{{product.salePrice | number :'3.0-0'}}
+            <span> {{'currency' | translate }}  </span></bdi>
+          </span>
+        </ins>
+        &nbsp;
+        <del class="strike">
+          <span class="amount">
+            <bdi>{{product.normalPrice | number :'3.0-0'}}
+            <span> {{'currency' | translate}}</span></bdi>
+          </span>
+        </del>
+      </div>
+    </div>
+    <div class="card-btn">
+      <a [routerLink]="['/product/'+ product.name.split(' ').join('-')]" [state]="{id:product.id}" >
+        <img class="d-block" src="assets/Images/cart.svg" alt="cart" />
+        <span>{{'card.btn' | translate}}</span>
+      </a>
+    </div>
+  </div>
+</div>

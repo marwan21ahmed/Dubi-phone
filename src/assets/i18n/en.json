@@ -1,0 +1,311 @@
+{
+  "language": "العربية",
+  "nav": {
+    "mobiles": {
+      "apple": "Apple",
+      "samsung": "Samsung",
+      "oppo": "Oppo",
+      "vivo": "Vivo",
+      "realme": "Realme",
+      "xiaomi": "Xiaomi",
+      "honor": "Honor",
+      "huawei": "Huawei",
+      "infinix": "Infinix"
+    },
+    "tablets": {
+      "ipad": "Ipad",
+      "samsung": "Samsung Tablet",
+      "realme": "Realme Tablet",
+      "lenovo": "Lenovo Tablet",
+      "huawei": "Huawei Tablet",
+      "tcl": "TCL"
+    },
+    "laptops": {
+      "asus": "Asus Laptops",
+      "dell": "Dell Laptops",
+      "hp": "HP Laptops",
+      "lenovo": "Lenovo Laptops",
+      "apple": "Apple Laptops"
+    },
+    "printers": {
+      "hp": "HP Printers",
+      "epson": "Epson Printers"
+    },
+    "tvs": {
+      "samsung": "Samsung TV",
+      "lg": "LG TV",
+      "Rowa": "Rowa TV",
+      "castle": "Castle TV",
+      "ata": "ATA TV",
+      "ultra": "ULTRA TV"
+    },
+    "monitors": {
+      "lg": "LG Monitors"
+    },
+    "games": {
+      "playstation": "PlayStation Consoles",
+      "cds": "Games CDs",
+      "accessories": "Games Accessories",
+      "headset": "Gaming Headset",
+      "mouse": "Gaming Mouse & Keyboard",
+      "scooters": "NScooters"
+    },
+    "mobileAccessories": {
+      "watch": "Smart Watch",
+      "sound": "Sound & TWS",
+      "powerBank": "Power Bank",
+      "cables": "Cables & docks",
+      "covers": "Covers",
+      "screen": "Screen Protector",
+      "headset": "Mobile Sound & Headset"
+    },
+    "laptopsAccessories": {
+      "bag": "Bags",
+      "keyboard": "Keyboard & Mouse",
+      "flash": "Memories & Flashs",
+      "power": "Power & Batteries",
+      "Sound": "Sound & Headset"
+    },
+    "otherAccessories": {
+      "home": "Home Appliances",
+      "care": "Personal Care",
+      "Speakers": "Speakers",
+      "health": "Health equipment",
+      "car": "Car Solution",
+      "others": "Others"
+    },
+    "kitchen": {
+      "air": "Air Fryer",
+      "microwaves": "Microwaves",
+      "waffle": "Waffle & Sandwich Maker",
+      "blenders": "Blenders & Mixers",
+      "kettle": "Kettle & Coffee Make"
+    },
+    "small": {
+      "vacuum": "Vacuum",
+      "irons": "Irons",
+      "heater": "Heater"
+    },
+    "mainBrands": {
+      "apple": "Apple",
+      "samsung": "Samsung",
+      "lenovo": "Lenovo",
+      "huawei": "Huawei",
+      "lg": "LG",
+      "xiaomi": "Xiaomi",
+      "oppo": "Oppo"
+    },
+    "otherBrands": {
+      "dell": "Dell",
+      "hp": "HP",
+      "acer": "Acer",
+      "sony": "Sony",
+      "anker": "Anker",
+      "asus": "Asus",
+      "honor": "Honor"
+    },
+    "mainTitles": {
+      "title1": "Mobiles & Tablets",
+      "title2": "Laptops & Printers",
+      "title3": "TVs & Monitors",
+      "title4": "Gaming",
+      "title5": "Accessories",
+      "title6": "Home Appliances",
+      "title7": "Brand"
+    },
+    "subTitles": {
+      "title1": "Mobiles",
+      "title2": "Tablets",
+      "title3": "Laptops",
+      "title4": "Printers",
+      "title5": "TVs",
+      "title6": "Monitors",
+      "title7": "Games",
+      "title8": "Mobile Accessories",
+      "title9": "Laptops Accessories",
+      "title10": "Other Accessories",
+      "title11": "Kitchen Appliances",
+      "title12": "Vacuum",
+      "title13": "Main Brands",
+      "title14": "Other Brands"
+    }
+  },
+  "currency": "EGP",
+  "header": {
+    "lastPiece": "Last Piece",
+    "login": "Login",
+    "shoppingCart": "Shopping Cart",
+    "placeholder": "Search for Products....",
+    "whatsapp": "Whatsapp Support",
+    "stores": "Store Locator",
+    "shipping": "Free Delivery on Orders over",
+    "wishlist":"Wishlist",
+    "account":"Account"
+  },
+  "landing": {
+    "banner": [
+      "en/freeclip-banner-en-web-copy.webp",
+      "en/cib-eng-copy.webp",
+      "en/s24-banner-en-web-copy.webp",
+      "en/misr-en-924-copy.webp",
+      "en/nbe-banner-en-18-copy.webp",
+      "en/home-aman-en-copy.webp",
+      "en/qnb-n-banner-222-copy.webp",
+      "en/alex-banner-en-web-copy.webp",
+      "en/adib-banner-en-web-copy.webp",
+      "en/point-banner-en-web-codsdspy.webp",
+      "en/saib-eng-cop4y.webp"
+    ],
+    "subBanner": {
+      "banner1": "en/souhoola-banne-en-coooopy.webp",
+      "banner2": "en/banner-en-copy.webp"
+    }
+  },
+  "home": {
+    "sectionImages": {
+      "hurryUp": "en/x7b-bundle-eng-copy.webp",
+      "newArrival": "en/reno-11-eng-copy.webp",
+      "apple": "en/apple-sec.webp",
+      "laptop": "en/asus-g16-copy.webp",
+      "watch": "en/gt4-en-des-copy.webp",
+      "home": "en/homeSec.webp",
+      "sound": "en/free-clip-eng-copy.webp"
+    },
+    "title":{
+      "newArrival":"New Arrivals",
+      "apple":"Apple",
+      "laptop":"Laptops",
+      "watch":"Smart Watch",
+      "home":"Home Appliances",
+      "sound":"Sound"
+    },
+    "btn":"Shop All"
+  },
+  "card":{
+    "sale":"Sale!",
+    "btn":"Add to Cart"
+  }
+  ,
+  "productsPage":{
+    "home":"Home",
+    "filter":"Filter By",
+    "show":"Showing",
+    "of":"of",
+    "result":"results",
+    "sort":"Sort By",
+    "stock":
+    {
+      "Status":"Stock Status",
+      "all":"Show All",
+      "in":"In Stock"
+    },
+    "price":"Price"
+  },
+  "checkout":{
+    "secure":"Secure Checkout",
+    "whatsapp":"Whatsapp Support",
+    "checkout":"Checkout",
+    "back":"Back to Cart",
+    "coupon":"Do You Have a Coupon?",
+    "shippingInfo":"Shipping Info",
+    "contactInfo":"Contact Information",
+    "email":"Email address",
+    "shippingMethod":"Shipping Method",
+    "homeDelivery":"Home Delivery",
+    "inStorePickup":"In-Store Pickup",
+    "pickupStore":"Pickup Store",
+    "shippingAddress":"Shipping Address",
+    "fName":"First Name",
+    "lName":"Last Name",
+    "address":"Address",
+    "phone":"Phone Number",
+    "city":"City",
+    "toPayment":"Proceed to Payment",
+    "payment":"Payment",
+    "paymentSummary":"Payment Summary",
+    "subtotal":"Subtotal",
+    "shipping":"Shipping",
+    "freeShipping":"Free Shipping",
+    "total":"Total",
+    "products":"Products",
+    "productsCount":" items in your order",
+    "qty":"Qty",
+    "contact":"Contact",
+    "customerAddress":"Customer Address",
+    "change":"Change",
+    "paymentMethod":"Payment Method",
+    "placeOrder":"Place Order",
+    "footer":"Dubai Phone. All right reserved."
+
+  }
+  ,
+  "search":"Search results:",
+  "shiping":{
+    "Fast Shipping":"Fast Shipping",
+    "Safe Payment":"Safe Payment",
+    "Free Returns":"Free Returns"
+  },
+  "productdetails":{
+    "SalePrice":"Sale Price",
+    "Normal Price":"Normal Price",
+    "Normal price apply on 0% interest offers":"Normal price apply on 0% interest offers",
+    "Check Stores Availability":"Check Stores Availability",
+    "In Stock":"In Stock",
+    "NOT Avaliable":"NOT Avaliable",
+    "Or Installments from 514 EGP /Mo":"Or Installments from 514 EGP /Mo",
+    "Check Plans":"Check Plans",
+    "Add To Cart":"Add To Cart",
+    "Buy now":"Buy now",
+    "Additional Details":"Additional Details"
+  },
+  "sidecart":{
+    "item":"item in your order",
+    "Subtotal":"Subtotal",
+    "Shipping Fees":"Shipping Fees",
+    "Calculated At Checkout":"Calculated At Checkout",
+    "You save":"You save",
+    "Go To Cart":"Go To Cart",
+    "proceed to secure checkout":"proceed to secure checkout",
+    "QTY":"QTY"
+  },
+  "footer":{
+    "links":"links",
+    "Home":"Home",
+    "About us":"About us",
+    "Cart":"Cart",
+    "My account":"My account",
+    "Support & Services":"Support & Services",
+    "installment":"installment",
+    "Redeem Points":"Redeem Points",
+    "E-VOUCHER":"E-VOUCHER",
+    "Live Chat":"Live Chat",
+    "Request a shipment return":"Request a shipment return",
+    "Why to buy from Dubai Phone":"Why to buy from Dubai Phone",
+    "Help":"Help",
+    "Corporate enquiries":"Corporate enquiries",
+    "Order Tracking":"Order Tracking",
+    "Refund and Returns Policy":"Refund and Returns Policy",
+    "Terms & conditions":"Terms & conditions",
+    "Contact us":"Contact us",
+    "Ready to Make Your Digital Life?":"Ready to Make Your Digital Life?",
+    "Download Our App":"Download Our App"
+  },
+  "cart":{
+    "mycart":"mycart",
+    "item":"You have ",
+    "item2":"items in your cart",
+    "Payment Summary":"Payment Summary",
+    "Subtotal":"Subtotal",
+    "ShippingFees":"Shipping Fees",
+    "Calculated At Checkout":"Calculated At Checkout",
+    "Total":"Total",
+    "Yousave":"You save",
+    "promo":"Do You Have a Promo code?",
+    "proceed to secure checkout":"proceed to secure checkout",
+    "Return and Refund Policy":"Return and Refund Policy",
+    "Remove":"Remove",
+    "want":"Want to have another look around?",
+    "continue":"Continue Shopping"
+  }
+
+}

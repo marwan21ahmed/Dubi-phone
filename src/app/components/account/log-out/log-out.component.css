@@ -1,0 +1,47 @@
+.container{
+    margin-top:60px;
+    width:900px;
+    height:100%;
+  }
+.username{
+margin-top:30px;
+}
+input[type=text],input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height:60px;
+  }
+  h1{
+    font-size:45px;
+
+  }
+  p{
+    font-size:25px;
+  }
+  label{
+    font-size:25px;
+  }
+  a{
+    color:rgb(98, 159, 206);
+    font-size:25px;
+    margin-left:680px;
+  }
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: rgb(40, 113, 171);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    width:450px;
+    height:60px;
+    font-size:22px;
+    letter-spacing:1px;
+    margin:50px 120px 80px 250px;
+  }

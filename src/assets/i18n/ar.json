@@ -1,0 +1,312 @@
+{
+  "language": "ENGLISH",
+  "nav": {
+    "mobiles": {
+      "apple": "ابل",
+      "samsung": "سامسونج",
+      "oppo": "اوبو",
+      "vivo": "فيفو",
+      "realme": "ريلمي",
+      "xiaomi": "شاومي",
+      "honor": "هونر",
+      "huawei": "هواوي",
+      "infinix": "انفنكس"
+    },
+    "tablets": {
+      "ipad": "ايباد",
+      "samsung": "تابلت سامسونج",
+      "realme": "تابلت ريلمي",
+      "lenovo": "لينوفو",
+      "huawei": "تابلت هواوي",
+      "tcl": "تي سي ال"
+    },
+    "laptops": {
+      "asus": "لابتوب اسوس",
+      "dell": "لابتوب ديل",
+      "hp": "لابتوب اتش بي",
+      "lenovo": "لابتوب لينوفو",
+      "apple": "ماك بوك"
+    },
+    "printers": {
+      "hp": "برنترات اتش بي",
+      "epson": "برنترات ابسون"
+    },
+    "tvs": {
+      "samsung": "تلفزيونات سامسونج",
+      "lg": "تلفزيونات ال جي",
+      "Rowa": "شاشات روي",
+      "castle": "كاسل",
+      "ata": "ايه تي ايه",
+      "ultra": "الترا"
+    },
+    "monitors": {
+      "lg": "شاشات ال جي"
+    },
+    "games": {
+      "playstation": "بلايستيشن",
+      "cds": "اسطوانات العاب",
+      "accessories": "اكسسوارات الالعاب",
+      "headset": "سماعة الألعاب",
+      "mouse": "كيبورد & ماوس الألعاب",
+      "scooters": "سكوتر"
+    },
+    "mobileAccessories": {
+      "watch": "ساعات ذكيه",
+      "sound": "سماعات لاسلكيه",
+      "powerBank": "باور بنك",
+      "cables": "كابلات & شواحن",
+      "covers": "جرابات",
+      "screen": "اسكرينات",
+      "headset": "سماعات رأس للموبايل"
+    },
+    "laptopsAccessories": {
+      "bag": "شنط",
+      "keyboard": "كيبورد & ماوس",
+      "flash": "فلاشات-بطاقة ذاكره",
+      "power": "ملحقات الطاقة",
+      "Sound": "سماعات رأس"
+    },
+    "otherAccessories": {
+      "home": "أجهزة منزلية",
+      "care": "ادوات العناية الشخصية",
+      "Speakers": "مكبرات صوت",
+      "health": "عنايه صحيه",
+      "car": "اكسسوارات سيارات",
+      "others": "اخري"
+    },
+    "kitchen": {
+      "air": "اير فراير",
+      "microwaves": "ميكروويف",
+      "waffle": "الخلاطات",
+      "blenders": "ماكينة الوافل والسندوتشات",
+      "kettle": " ماكينة القهوة و السخانات"
+    },
+    "small": {
+      "vacuum": "دفايات كهربائية",
+      "irons": "مكاوي",
+      "heater": "مكانس كهربائية"
+    },
+    "mainBrands": {
+      "apple": "ابل",
+      "samsung": "سامسونج",
+      "lenovo": "ال جي",
+      "huawei": "هواوي",
+      "lg": "شاومي",
+      "xiaomi": "لينوفو",
+      "oppo": "اوبو"
+    },
+    "otherBrands": {
+      "dell": "ديل",
+      "hp": "اتش بي",
+      "acer": "آيسر",
+      "sony": "سوني",
+      "anker": "انكر",
+      "asus": "اسوس",
+      "honor": "اونر"
+    },
+    "mainTitles": {
+      "title1": " موبايلات و تابلت",
+      "title2": "لاب توب و طابعات",
+      "title3": "تلفزيونات و شاشات",
+      "title4": "العاب",
+      "title5": "اكسسوارات",
+      "title6": "منتجات المنزل",
+      "title7": "الماركات"
+    },
+    "subTitles": {
+      "title1": "موبايل",
+      "title2": "تابلت",
+      "title3": "لاب توب",
+      "title4": "طابعات",
+      "title5": "تلفزيونات",
+      "title6": "شاشات",
+      "title7": "العاب",
+      "title8": "اكسسوارت الموبايل",
+      "title9": "اكسسوارات لابتوب",
+      "title10": "اكسسوارات اخري",
+      "title11": "منتجات المطبخ",
+      "title12": "اجهزة منزلية صغيرة",
+      "title13": "الماركات",
+      "title14": "مركات اخري"
+    }
+  },
+  "currency": "جنية",
+  "header": {
+    "lastPiece": "القطعة الأخيرة",
+    "login": "تسجيل الدخول",
+    "shoppingCart": " عربة التسوق ",
+    "placeholder": "....بحث عن المنتجات",
+    "whatsapp": "دعم من خلال الواتساب",
+    "stores": "أماكن الفروع",
+    "shipping": "شحن مجاني للطلبات اكثر من",
+    "wishlist":"المفضلة",
+    "account":"الحساب"
+  },
+  "landing": {
+    "banner": [
+      "ar/freeclip-banner-ar-web-copy.webp",
+      "ar/cib-ar-copy.webp",
+      "ar/s24-banner-ar-web-copy.webp",
+      "ar/misr-ar-924-copy-ar.webp",
+      "ar/nbe-banner-ar-18-copy.webp",
+      "ar/home-aman-ar-copy.webp",
+      "ar/qnb-ar-banner-222-copy.webp",
+      "ar/alex-banner-ar-web-copy.webp",
+      "ar/adib-banner-ar-web-copy.webp",
+      "ar/copy-ar.webp"
+    ],
+    "subBanner": {
+      "banner1": "ar/souhoola-banne-ar-c000py-1.webp",
+      "banner2": "ar/banner-ar-copy.webp"
+    }
+  },
+  "home":{
+    "sectionImages":{
+      "hurryUp":"ar/x7b-bundle-ar-copy.webp",
+      "newArrival":"ar/reno-11-ar-copy.webp",
+      "apple":"ar/apple-sec.webp",
+      "laptop":"ar/asus-g16-ar-copy.webp",
+      "watch":"ar/gt4-ar-des-copy.webp",
+      "home":"ar/home-banner-ar-web-coooopy.webp",
+      "sound":"ar/free-clip-copy-ar.webp"
+    },
+    "title":{
+      "newArrival":"وصل حديثاََ",
+      "apple":"ابل",
+      "laptop":"لابتوبات",
+      "watch":"ساعات ذكية",
+      "home":"المنتجات المنزلية",
+      "sound":"عروض السماعات"
+    }
+    ,
+    "btn":"المزيد من"
+  },
+  "card":{
+    "sale":"!تخفيض",
+    "btn":"إضافة إلي السلة"
+  }
+  ,
+  "productsPage":{
+    "home":"الرئيسية",
+    "filter":"تصفية بواسطة",
+    "show":"عرض",
+    "of":"من",
+    "result":"النتائج",
+    "sort":"ترتيب حسب",
+    "stock":
+    {
+      "Status":"حالة المخزون",
+      "all":"عرض الكل",
+      "in":"متوافر في المخزن"
+    },
+    "price":"السعر"
+
+
+  },
+  "checkout":{
+    "secure":"دفع آمن",
+    "whatsapp":"دعم من خلال الواتساب",
+    "checkout":"الدفع",
+    "back":"الرجوع الى عربة التسوق",
+    "coupon":"هتل تمتلك كوبون خصم؟",
+    "shippingInfo":"معلومات الشحن",
+    "contactInfo":"معلومات التواصل",
+    "email":"عنوان البريد الإلكتروني",
+    "shippingMethod":" طريقة الشحن",
+    "homeDelivery":"توصيل للمنزل",
+    "inStorePickup":"استلام من الفرع",
+    "pickupStore":"المتاجر",
+    "shippingAddress":"عنوان الشحن",
+    "fName":"الاسم الاول",
+    "lName":"الاسم الاخير",
+    "address":"العنوان ",
+    "phone":"رقم الهاتف",
+    "city":"محافظة ",
+    "toPayment":"الذهاب الي دفع",
+    "payment":"الدفع",
+    "paymentSummary":"ملخص عملية الدفع",
+    "subtotal":"الاجمالي الفرعي",
+    "shipping":"الشحن",
+    "freeShipping":"شحن المجاني",
+    "total":"الاجمالي",
+    "products":"المنتجات",
+    "productsCount":" وحدات في طلبك",
+    "qty":"الكمية",
+    "contact":"تواصل",
+    "customerAddress":"عنوان العميل",
+    "change":"تغيير",
+    "paymentMethod":"طريقة الدفع",
+    "placeOrder":"تأكيد الطلب",
+    "footer":" جميع الحقوق محفوظة لشركة دبي فون"
+  },
+  "search":"نتائج البحث :",
+  "shiping":{
+    "Fast Shipping":"شحن سريع",
+    "Safe Payment":"دفع آمن",
+    "Free Returns":"إرجاع مجاني"
+  },
+  "productdetails":{
+    "SalePrice":"سعر التخفيض",
+    "Normal Price":"السعر قبل التخفيض",
+    "Normal price apply on 0% interest offers":"السعر قبل الخصم يطبق في حالة عرض 0% فوائد",
+    "Check Stores Availability":"التحقق من توافر المنتج",
+    "In Stock":"متاح",
+    "NOT Avaliable":"غير متاح ",
+    "Or Installments from 514 EGP /Mo":"او قسط يبدأ من 514 EGP /شهر",
+    "Check Plans":"تفاصيل التقسيط",
+    "Add To Cart":"اضافة الى السلة",
+    "Buy now":"اشترى الان",
+    "Additional Details":"تفاصيل إضافية"
+  },
+  "sidecart":{
+    "item":"عنصر في طلبك.",
+    "Subtotal":"الاجمالي الفرعي",
+    "Shipping Fees":"مصاريف الشحن",
+    "Calculated At Checkout":"سيتم احتسابها عند عملية الدفع",
+    "You save":"وفرت",
+    "Go To Cart":"اذهب الى عربة التسوق",
+    "proceed to secure checkout":"متابعة للدفع الامن",
+    "QTY":"الكمية"
+  },
+  "footer":{
+    "links":"روابط",
+    "Home":"الرئيسية",
+    "About us":"من نحن",
+    "Cart":"عربة التسوق",
+    "My account":"الحساب",
+    "Support & Services":"الدعم و الخدمات",
+    "installment":"تقسيط",
+    "Redeem Points":"استبدال نقاط دبي فون",
+    "E-VOUCHER":"بطاقات الهدايا",
+    "Live Chat":"الدعم المباشر",
+    "Request a shipment return":"طلب ارجاع",
+    "Why to buy from Dubai Phone":"ليه تشتري من دبي فون؟",
+    "Help":"مساعده",
+    "Corporate enquiries":"حلول الشركات",
+    "Order Tracking":"تتبع الطلب",
+    "Refund and Returns Policy":"شروط الاستبدال و الاسترجاع",
+    "Terms & conditions":"الشروط و الاحكام",
+    "Contact us":"اتصل بنا",
+    "Ready to Make Your Digital Life?":"هل أنت مستعد  لبدء حياتك الرقمية؟",
+    "Download Our App":"Download Our App"
+
+  },
+  "cart":{
+    "mycart":"سلة التسوق الخاصة بي",
+    "item":"هناك ",
+    "item2":"عنصر في عربة التسوق",
+    "Payment Summary":"ملخص عملية الدفع",
+    "Subtotal":"الاجمالي الفرعي",
+    "ShippingFees":"مصاريف الشحن",
+    "Calculated At Checkout":"سيتم احتسابها عند عملية الدفع",
+    "Total":"الاجمالي",
+    "Yousave":"وفرت",
+    "promo":"هل تملك كوبون خصم؟",
+    "proceed to secure checkout":"متابعة للدفع الامن",
+    "Return and Refund Policy":"سياسة الأستبدال و الأسترجاع",
+    "Remove":"ازاله",
+    "want":"هل تريد القاء نظرة اخرى؟",
+    "continue":"متابعة التسوق"
+  }
+
+}

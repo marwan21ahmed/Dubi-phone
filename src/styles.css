@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-family: "Almarai", sans-serif !important;
+}
+:root{
+  --main-color:#2B7AB9;
+  --main-bg-color:#2B7AB9;
+}
+.main-color{
+  color: var(--main-color);
+}
+.main-bg-color{
+  background-color: var(--main-bg-color);
+}
+html,
+body {
+  height: 100%;
+
+}
+body {
+  margin: 0;
+  /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+  background-image: linear-gradient(70.66deg, #e8ecee 0%, #f9fafb 100%) ;
+}
+p-dropdown > div {
+  border-radius: 200px;
+  width: 300px;
+}
+p-dropdown ul {
+  padding-left: 0px;
+}
+.p-galleria-indicator.p-highlight button{
+  background-color: #2b7ab9;
+}
+p-galleria .p-link{
+  border-radius: 50%;
+  color: #2b7ab9;
+}
+
+p-galleria .p-galleria-item-prev,
+
+p-galleria .p-galleria-item-next{
+  color: #2b7ab9;
+}
+/* .p-carousel-indicators{
+  display: none;
+} */
+/* product Details */
+
+.p-galleria-thumbnail-container{
+  background-color: transparent;
+}
+.p-image-preview-container:hover{
+background-color: #fff;
+}
+.p-sidebar-right {
+  width: 30rem;
+}

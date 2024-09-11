@@ -1,0 +1,154 @@
+<section [hidden]="isArabic" class="mt-4">
+  <div class="container">
+    <nav
+      style="--bs-breadcrumb-divider: '>'"
+      aria-label="breadcrumb"
+      [hidden]="!showBreadcrumbs"
+      class="fs-6"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a
+            [routerLink]="['']"
+            routerLinkActive="router-link-active"
+            class="text-dark text-decoration-none"
+            >{{'productsPage.home' | translate}}</a
+          >
+        </li>
+        @if (firstPartUrl===undefined) {
+
+        <li class="breadcrumb-item active">
+          <a
+            [routerLink]="['/', mainUrl]"
+            routerLinkActive="router-link-active"
+            class="text-dark text-decoration-none"
+            >{{ mainUrl }}</a
+          >
+        </li>
+      }
+        @else if (SecondPartUrl===undefined) {
+          <li class="breadcrumb-item ">
+            <a
+              [routerLink]="['/', mainUrl]"
+              routerLinkActive="router-link-active"
+              class="text-dark text-decoration-none"
+              >{{ mainUrl }}</a
+            >
+          </li>
+        <li class="breadcrumb-item active">
+          {{ firstPartUrl }}
+        </li>
+        }@else {
+        <li class="breadcrumb-item">
+          <a
+            [routerLink]="['/', mainUrl, firstPartUrl]"
+            routerLinkActive="router-link-active"
+            class="text-dark text-decoration-none"
+          >
+            {{ firstPartUrl }}
+          </a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ SecondPartUrl }}
+        </li>
+        }
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<main class="pt-1" >
+  <div class="page-header fs-2">
+    @if(mainUrl==='brand') {
+      <app-categories [Categories]="categories"></app-categories>
+    }
+    @else {
+      <div class="container mt-5" [hidden]="!isSearch" [dir]="isArabic?'rtl':'ltr'">
+        <h1 >{{'search'|translate}} {{searchResult}}</h1>
+      </div>
+      <app-brands [isSmall]="true" [brands]="brands" [showTitle]="!isSearch"></app-brands>
+    }
+  </div>
+  <div class="container mx-auto mt-5" [dir]="isArabic?'rtl':'ltr'">
+    <div class="page-grid pt-5">
+      <div class="filters">
+        <h2>{{'productsPage.filter' | translate}}</h2>
+        <div class="stock-filter py-5">
+          <h3>{{'productsPage.stock.Status' | translate}}</h3>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button checked  (click)="loadData()" value="1">{{'productsPage.stock.all' | translate}}</mat-radio-button>
+            <mat-radio-button  class="d-flex align-items-center "  value="2" (click)="filterByStock()">{{'productsPage.stock.in' | translate}} <span class="fa-xs"> ({{stock}})</span></mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="price-filter" >
+          <h3>{{'productsPage.price' | translate}}</h3>
+          <mat-slider [min]="minPrice" [max]="maxPrice" class="w-100">
+            <input value="{{minPrice}}" matSliderStartThumb #minRef  (change)="filterByPrice()" />
+            <input value="{{maxPrice}}" matSliderEndThumb #maxRef (change)="filterByPrice()" />
+          </mat-slider>
+          <div class="d-flex slider-input gx-3 mt-4">
+            <input class="mr-3" type="number" [(value)]="minRef.value"(change)="filterByPrice()" />
+            <input type="number" [(value)]="maxRef.value" (change)="filterByPrice()"/>
+          </div>
+          <div class="range-label mt-4">
+            <span>{{'productsPage.price' | translate}}:</span>
+            <span>{{ minRef.value }}</span>
+            <span> {{'currency' | translate}} - </span>
+            <span>{{ maxRef.value }}</span>
+            <span> {{'currency' | translate}}</span>
+          </div>
+        </div>
+        <!-- <div class="filter">
+          <h3>Brands</h3>
+          <div class="checkBoxs">
+            <mat-checkbox color="primary" class="example-margin"
+              >Check me!</mat-checkbox
+            >
+          </div>
+        </div> -->
+      </div>
+      @if (products.length==0) {
+        <div class="empty">
+          <h2 class="mb-0">No products were found matching your selection.</h2>
+        </div>
+      }
+@else {
+      <div>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="m-0">{{'productsPage.home' | translate}} {{(itemPerPage * (currentPage - 1) )+1}} – {{(itemPerPage * currentPage)>count?count:(itemPerPage * currentPage) }} {{'productsPage.of' | translate}} {{count}} {{'productsPage.result' | translate}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="img-icon mx-3" (click)="handleGrid($event)">
+              <img
+                src="assets/Images/filter.svg"
+                alt="filter-icon"
+                draggable="false"
+              />
+            </div>
+            <p-dropdown
+              [options]="isArabic ? sortsAR:sorts"
+              optionLabel="name"
+              [(ngModel)]="selectedSort"
+              [showClear]="true"
+              placeholder="{{'productsPage.sort' | translate}}"
+              (onChange)="OrderBy(selectedSort)"
+            >
+            </p-dropdown>
+          </div>
+        </div>
+        <div class="products-grid" #ProductGrid>
+          @for (prod of products; track $index) {
+          <app-card [isGridOne]="!isFilter1" [product]="prod"></app-card>
+          }
+        </div>
+        @if (isLoading) {
+        <div class="mt-5">
+          <span class="loader"></span>
+        </div>
+        }
+      </div>
+    }
+    <div #test></div>
+
+    </div>
+  </div>
+</main>

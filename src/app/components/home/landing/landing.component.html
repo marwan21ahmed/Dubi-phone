@@ -1,0 +1,36 @@
+<div class="container pt-5" >
+  <div class="row " [ngClass]="{'flex-row-reverse': isArabic}">
+    <div class="col-md-8 col-12">
+      <p-galleria
+        [value]="'landing.banner' | translate"
+        [autoPlay]="true"
+        [shouldStopAutoplayByClick]="false"
+        [circular]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [showIndicators]="true"
+        [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{ 'margin-top': '2em'  }"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img
+          draggable="false"
+            [src]="'/assets/Images/Home/' + item"
+            style="width: 100%; display: block"
+          />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" style="display: block" />
+          </div>
+        </ng-template>
+      </p-galleria>
+    </div>
+    <div class="col-md-4 col-12">
+      <div class="d-flex flex-column justify-content-between pt-5">
+        <img draggable="false" [src]="'/assets/Images/Home/'+ ('landing.subBanner.banner1' |translate)" alt="">
+        <img draggable="false" class="mt-5" [src]="'/assets/Images/Home/'+ ('landing.subBanner.banner2' |translate)" alt="">
+      </div>
+    </div>
+  </div>
+</div>

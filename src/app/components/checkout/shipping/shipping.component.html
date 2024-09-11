@@ -1,0 +1,157 @@
+<div class="d-flex gap-3 mt-4 align-items-center  mt-5 mb-4">
+  <div class="checkout-step">1</div>
+  <h3 class="main-color fs-5 m-0">{{'checkout.shippingInfo' | translate}}</h3>
+</div>
+
+<form [formGroup]="shippingInfo" class="shipping-page-form mb-5">
+  <h2 class="text-black font-semibold  mb-2">
+    1. {{'checkout.contactInfo' | translate}}
+  </h2>
+  <div class="pb-3">
+    <label for="Email" class="col-sm-2 col-form-label">{{'checkout.email' | translate}} <span class="text-danger">*</span></label>
+    <div>
+      <input type="email" class="form-control rounded-pill py-2 px-3" id="Email" formControlName="emailAddress"
+        [ngClass]="{'is-invalid':(!EmailAddress?.touched || !EmailAddress?.dirty) && EmailAddress?.invalid}" />
+    </div>
+  </div>
+  <div class="mt-5 mb-4">
+    <h2 class="text-black font-semibold">
+      {{'checkout.shippingMethod' | translate}}
+    </h2>
+    <div class="d-flex gap-3 flex-md-row flex-column shipping-method">
+      <div class="home flex-grow-1 bg-white  p-4 rounded-4 d-flex justify-content-between "
+        (click)="changeShippingMethod($event)">
+        <div>
+          <i class="fa-solid fa-xl fa-truck mx-3"></i>
+          <label for="home-delivery" class="fs-6 home">      {{'checkout.homeDelivery' | translate}}
+          </label>
+        </div>
+        <input formControlName="shippingMethod"
+          value="HomeDelivery"
+          type="radio" [checked]="home" checked id="home-delivery">
+      </div>
+      <div class="store flex-grow-1 bg-white p-4 rounded-4 d-flex justify-content-between"
+        (click)="changeShippingMethod($event)">
+        <div>
+          <i class="fa-solid fa-xl fa-store mx-3"></i>
+          <label for="store-pickup" class="fs-6 store">      {{'checkout.inStorePickup' | translate}}
+          </label>
+        </div>
+        <input formControlName="shippingMethod" value="StorePickup"
+          type="radio" id="store-pickup" [checked]="!home">
+      </div>
+    </div>
+  </div>
+  @if (!home) {
+  <h3 class="fw-medium">      {{'checkout.pickupStore' | translate}}
+    e</h3>
+  <select id="shipping-pickup-store-select" class="form-select  rounded-5 px-4 py-2 mb-5" name="shipping_pickup_stores"
+  formControlName="store"
+  >
+    <option value="">Select a store</option>
+    <option data-cost="0" data-id="39418" data-country="EG" value="Zamalek">
+      Zamalek
+    </option>
+    <option data-cost="0" data-id="52791" data-country="EG" value="Smouha - Alexandria">
+      Smouha - Alexandria
+    </option>
+    <option data-cost="0" data-id="39413" data-country="EG" value="Nasr City">
+      Nasr City
+    </option>
+    <option data-cost="0" data-id="39421" data-country="EG" value="Mohandsen">
+      Mohandsen
+    </option>
+    <option data-cost="0" data-id="39426" data-country="EG" value="Miami - Alexandria">
+      Miami - Alexandria
+    </option>
+    <option data-cost="0" data-id="40037" data-country="EG" value="Mall of Egypt">
+      Mall of Egypt
+    </option>
+    <option data-cost="0" data-id="39411" data-country="EG" value="Mall of Arabia">
+      Mall of Arabia
+    </option>
+    <option data-cost="0" data-id="39412" data-country="EG" value="Maadi - Al Nasr">
+      Maadi - Al Nasr
+    </option>
+    <option data-cost="0" data-id="39422" data-country="EG" value="Maadi">
+      Maadi
+    </option>
+    <option data-cost="0" data-id="39415" data-country="EG" value="Faisal">
+      Faisal
+    </option>
+    <option data-cost="0" data-id="39417" data-country="EG" value="City Stars">
+      City Stars
+    </option>
+    <option data-cost="0" data-id="39424" data-country="EG" value="Alf Maskan">
+      Alf Maskan
+    </option>
+    <option data-cost="0" data-id="39423" data-country="EG" value="Al Salam">
+      Al Salam
+    </option>
+    <option data-cost="0" data-id="39416" data-country="EG" value="Al Obour">
+      Al Obour
+    </option>
+    <option data-cost="0" data-id="39414" data-country="EG" value="Al Korba">
+      Al Korba
+    </option>
+    <option data-cost="0" data-id="50300" data-country="EG" value="6 October - Hosry">
+      6 October - Hosry
+    </option>
+    <option data-cost="0" data-id="39425" data-country="EG" value="6 October">
+      6 October
+    </option>
+    <option data-cost="0" data-id="39419" data-country="EG" value="5th Settlement">
+      5th Settlement
+    </option>
+  </select>
+  }
+  @else {
+  <h2 class="text-black font-semibold ">
+          {{'checkout.shippingAddress' | translate}}
+  </h2>
+  }
+  <div class="name d-md-flex d-block gap-5">
+    <div class="flex-grow-1 mt-4">
+      <label for="fname">{{'checkout.fName' | translate}} &nbsp;<span class="text-danger">*</span></label>
+      <input formControlName="firstName"
+        [ngClass]="{'is-invalid':(!FirstName?.touched || !FirstName?.dirty) && FirstName?.invalid}"
+        class="form-control rounded-5 form-control-lg mt-2" id="fname" type="text">
+    </div>
+    <div class="flex-grow-1 mt-4">
+      <label for="lname">{{'checkout.lName' | translate}} &nbsp;<span class="text-danger">*</span></label>
+      <input formControlName="lastName"
+        [ngClass]="{'is-invalid':(!LastName?.touched || !LastName?.dirty) && LastName?.invalid}"
+        class="form-control rounded-5 form-control-lg  mt-2" type="text" id="lname">
+    </div>
+
+  </div>
+  <div class="mt-4">
+    <label for="address">{{'checkout.address' | translate}} &nbsp;<span class="text-danger">*</span></label>
+    <input formControlName="address"
+      [ngClass]="{'is-invalid':(!Address?.touched || !Address?.dirty) && Address?.invalid}"
+      class="form-control rounded-5 form-control-lg  mt-2" type="text" id="address">
+  </div>
+  <div class="mt-4">
+    <label for="city">{{'checkout.city' | translate}} &nbsp;<span class="text-danger">*</span></label>
+    <input
+    formControlName="city"
+          [ngClass]="{'is-invalid':(!City?.touched || !City?.dirty) && City?.invalid}"
+    class="form-control rounded-5 form-control-lg  mt-2" type="text" id="city">
+  </div>
+  <div class="mt-4 mb-5 pb-2">
+    <label for="phone">{{'checkout.phone' | translate}} &nbsp;<span class="text-danger">*</span></label>
+    <input
+    formControlName="phone"
+          [ngClass]="{'is-invalid':(!Phone?.touched || !Phone?.dirty) && Phone?.invalid}"
+     class="form-control rounded-5 form-control-lg  mt-2" type="text" id="phone">
+  </div>
+  <button type="submit" (click)="SaveInfo($event)">
+    <i class="fa-solid fa-wallet mx-2 fa-lg"></i><span class="fs-6">{{'checkout.toPayment' | translate}}</span>
+    </button>
+
+</form>
+
+<div class="d-flex gap-3 mt-4 align-items-center  mt-5 mb-4">
+  <div class="payment-step">2</div>
+  <h3 class="main-color fs-5 m-0">{{'checkout.payment' | translate}}</h3>
+</div>

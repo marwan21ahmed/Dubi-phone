@@ -1,0 +1,14 @@
+<div class="container py-4">
+  <h2>Wishlist</h2>
+  @if (products.length===0) {
+    <p class="my-5 fs-6">No products in your wishlist</p>
+  }
+  @else {
+    <div class="row" #container>
+      @for (item of products; track $index) {
+      <app-card class=" col-12 col-md-6 mb-4" [product]="item" [isWishlist]="true"></app-card>
+      }
+    </div>
+  }
+</div>
+

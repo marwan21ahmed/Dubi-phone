@@ -1,0 +1,9 @@
+.blueDiv{
+    margin-top:55px;
+    background-color:rgb(61, 156, 210);
+    color:white;
+    padding:15px 20px 15px ;
+    font-size:18px;
+    border-left:12px solid rgb(43, 122, 185); /* Adjust thickness and color as needed */
+    padding-left: 10px; /* Add padding to make space for the border */
+}

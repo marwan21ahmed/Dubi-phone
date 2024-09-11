@@ -1,0 +1,110 @@
+.page-grid{
+  display: grid;
+    grid-template-columns: 1fr 3fr ;
+    grid-gap: 4.5rem ;
+    margin-bottom: 4rem;
+}
+
+p{
+  font-size: 14px;
+}
+.img-icon{
+  border: 1px solid #4d4d4d;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+.img-icon:hover{
+  background-color: #eef0f2;
+}
+.products-grid {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+.products-grid-one{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.4rem;
+  margin-top: 2rem;
+}
+mat-radio-button{
+  display: block;
+}
+.price-filter{
+  border-top: 1px solid #ccc;
+  padding-block:40px ;
+}
+.slider-input input[type='number']{
+  width: 80% ;
+  height: 50px ;
+  border-radius: 75px ;
+  border: 1px solid #d3dbde ;
+  background-color: #fff ;
+  padding: 10px 20px 10px 24px ;
+  font-size: 16px ;
+  font-weight: 400 ;
+  line-height: 24px ;
+  letter-spacing: 0.25px ;
+  color: #000 ;
+  outline: none ;
+  margin-right: 15px;
+  -webkit-appearance: none;
+}
+.range-label{
+  color: #666;
+  font-size: 14px;
+  margin-top: 18px;
+  text-align: right;
+}
+
+.empty{
+  margin-bottom: 20px;
+    margin-left: 0;
+    padding: 1em 1.618em;
+    border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    color: #fff;
+    background-color: #3d9cd2;
+    height: fit-content;
+    font-size: 14px;
+}
+
+.loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: #5579a9;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 2px,  -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+}
